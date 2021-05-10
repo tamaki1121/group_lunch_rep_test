@@ -4,11 +4,11 @@ if (!isset($_SESSION)) {
 }
 if (true) {
     // if (!isset($_SESSION['customer'])) {
-    // $_SESSION['remember'] = '';
+    $_SESSION['remember'] = $_SERVER['HTTP_REFERER'];
     header('Location: ./end.php');
     // header('Location: http://'
-    // . $_SERVER['SERVER_NAME']
-    // . dirname($_SERVER['SCRIPT_NAME'])
-    // . '/end.php');
+    //     . $_SERVER['SERVER_ADDR']
+    //     . dirname($_SERVER['SCRIPT_NAME'])
+    //     . '/end.php');
     exit;
 }

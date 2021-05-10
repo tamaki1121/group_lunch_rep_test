@@ -1,3 +1,8 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +14,8 @@
 
 <body>
     <h1>end page</h1>
-
+    <?php echo $_SESSION['remember']; ?>
+    <a href="<?php echo htmlspecialchars($_SESSION['remember']); ?>">back</a>
 </body>
 
 </html>
